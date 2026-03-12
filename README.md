@@ -119,12 +119,6 @@ Then isolates shipments flagged as driven by over-forecasting to calculate:
 
 ---
 
-## ⚙️ How to Run
-
-### Prerequisites
-- PostgreSQL 13+ (recommended) or any SQL-compatible database
-- psql CLI or a GUI like DBeaver / TablePlus
-
 
 ## 🛠️ SQL Skills Demonstrated
 
