@@ -125,29 +125,6 @@ Then isolates shipments flagged as driven by over-forecasting to calculate:
 - PostgreSQL 13+ (recommended) or any SQL-compatible database
 - psql CLI or a GUI like DBeaver / TablePlus
 
-### Setup
-```bash
-# 1. Create a database
-createdb supply_chain_db
-
-# 2. Load schema
-psql -d supply_chain_db -f data/schema.sql
-
-# 3. Load seed data
-psql -d supply_chain_db -f data/seed_data.sql
-
-# 4. Create views
-psql -d supply_chain_db -f views/vw_sku_performance.sql
-psql -d supply_chain_db -f views/vw_region_scorecard.sql
-
-# 5. Run analysis
-psql -d supply_chain_db -f analysis/01_forecast_vs_actual.sql
-psql -d supply_chain_db -f analysis/02_accuracy_scorecard.sql
-psql -d supply_chain_db -f analysis/03_supplier_impact.sql
-psql -d supply_chain_db -f analysis/04_carbon_waste.sql
-```
-
----
 
 ## 🛠️ SQL Skills Demonstrated
 
@@ -162,16 +139,3 @@ psql -d supply_chain_db -f analysis/04_carbon_waste.sql
 
 ---
 
-## 🔮 Potential Extensions
-
-- Add a **rolling 3-month MAPE** using `ROWS BETWEEN` frame clauses
-- Build a **safety stock recommendation** engine based on demand variance
-- Create a **what-if analysis** — model CO2 savings if air shipments shift to sea
-- Connect to **Tableau / Power BI** using the views as a semantic layer
-
----
-
-## 👤 Author
-
-Built as a portfolio project demonstrating SQL-based supply chain performance analytics.
-Designed to reflect real challenges in demand planning, supplier management, and sustainable logistics.
